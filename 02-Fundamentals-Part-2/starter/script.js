@@ -40,3 +40,16 @@ const iran = percentageOfWorld2(85.03);
 console.log(`Процент населения страны Россия от мирового ${russia} `);
 console.log(`Процент населения страны Беларусь от мирового ${belarus} `);
 console.log(`Процент населения страны Иран  от мирового ${iran} `);
+//---------------  Arrow Functions -------------------------------------
+const percentageOfWorld3 = (population) => population / 79;
+const pacistan = 225.2;
+const afganistan = 39.84;
+const izrail = 9.364;
+
+const resultPacistan = percentageOfWorld3(pacistan);
+const resultAfganistan = percentageOfWorld3(afganistan);
+const resultIzrail = percentageOfWorld3(izrail);
+
+console.log(
+  `Население Пакистана ${resultPacistan}, Население Афганистана ${resultAfganistan}, Население Израиля  ${resultIzrail}`
+);
