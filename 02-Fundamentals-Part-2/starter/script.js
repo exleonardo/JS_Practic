@@ -10,7 +10,15 @@ function averageTwoComand(dolphins1, koalas1) {
   return string;
 }
 const dolphins1 = averageTwoComand(dolphins, koalas);
-const koalas1 = averageTwoComand(65, 54);
+// Функция 'checkWinner', которая принимает среднее значение очков каждой команды
+function checkWinner(avgDolhins, avgKoalas) {
+  if (avgDolhins > avgKoalas) {
+    console.log(`Дельфины победили победили со счетом ${dolphins}`);
+  } else if (avgKoalas > avgDolhins) {
+    console.log(`Коалы победили победили со счетом ${koalas} против ${dolphins}`);
+  }
+}
+const winner = checkWinner(dolphins, koalas);
 
 //----------------------- LECTURE: Functions -----------------------------------
 function describeCountry(country, population, capitalCity) {
@@ -83,7 +91,6 @@ describePopulation("Великобритания", 67.33);
 // 5, "Hello" -> "HelloHelloHelloHelloHello"
 function repeatStr(n, s) {
   const string = console.log(s.repeat(n));
-
   return string;
 }
 repeatStr(6, "I");
