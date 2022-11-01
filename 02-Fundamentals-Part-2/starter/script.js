@@ -1,6 +1,6 @@
 `use strict`;
 const calcAverage = (first, second, third) => (first + second + third) / 3;
-const dolphins = calcAverage(44, 23, 71);
+const dolphins = calcAverage(23, 34, 27);
 const koalas = calcAverage(65, 54, 49);
 
 console.log(dolphins, koalas);
@@ -12,10 +12,12 @@ function averageTwoComand(dolphins1, koalas1) {
 const dolphins1 = averageTwoComand(dolphins, koalas);
 // Функция 'checkWinner', которая принимает среднее значение очков каждой команды
 function checkWinner(avgDolhins, avgKoalas) {
-  if (avgDolhins > avgKoalas) {
+  if (avgDolhins >= avgKoalas * 2) {
     console.log(`Дельфины победили победили со счетом ${dolphins}`);
-  } else if (avgKoalas > avgDolhins) {
-    console.log(`Коалы победили победили со счетом ${koalas} против ${dolphins}`);
+  } else if (avgKoalas >= avgDolhins * 2) {
+    console.log(`Коалы победили  со счетом ${koalas} против ${dolphins}`);
+  } else {
+    console.log(`Никакая команда не победила`);
   }
 }
 const winner = checkWinner(dolphins, koalas);
