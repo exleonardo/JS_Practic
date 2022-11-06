@@ -23,6 +23,7 @@ function checkWinner(avgDolhins, avgKoalas) {
 const winner = checkWinner(dolphins, koalas);
 
 //----------------------- LECTURE: Functions -----------------------------------
+
 function describeCountry(country, population, capitalCity) {
   const string = console.log(
     `В ${country} проживает ${population} миллионов человек , а её столица ${capitalCity} `
@@ -32,20 +33,19 @@ function describeCountry(country, population, capitalCity) {
 const string1 = describeCountry("Финляндия", 5, "Хельсинки");
 const string2 = describeCountry("Germanu", 5, "pipiska");
 const string3 = describeCountry("yaponia", 5, "iphone");
-//------------------------------------------------------------------------------
 
 //---------------- LECTURE: Function Declarations vs. Expressions --------------
 
-function percentageOfWorld1(population) {
-  return population / 79;
-}
-const kitai = percentageOfWorld1(1441);
-const avstralia = percentageOfWorld1(257.4);
-const india = percentageOfWorld1(1393);
+// function percentageOfWorld1(population) {
+//   return population / 79;
+// }
+// const kitai = percentageOfWorld1(1441);
+// const avstralia = percentageOfWorld1(257.4);
+// const india = percentageOfWorld1(1393);
 
-console.log(`Процент населения страны китай от мирового ${kitai} `);
-console.log(`Процент населения страны Австралия от мирового ${avstralia} `);
-console.log(`Процент населения страны Индия от мирового ${india} `);
+// console.log(`Процент населения страны китай от мирового ${kitai} `);
+// console.log(`Процент населения страны Австралия от мирового ${avstralia} `);
+// console.log(`Процент населения страны Индия от мирового ${india} `);
 
 //----------------------------------------------------------------------
 const percentageOfWorld2 = function (population) {
@@ -91,10 +91,40 @@ describePopulation("Великобритания", 67.33);
 // Examples (input -> output)
 // 6, "I"     -> "IIIIII"
 // 5, "Hello" -> "HelloHelloHelloHelloHello"
+
 function repeatStr(n, s) {
   const string = console.log(s.repeat(n));
   return string;
 }
 repeatStr(6, "I");
 
-//-------------------------------------------------------------------------------------------------------
+//-------------------------------------LECTURE: Introduction to Arrays---------------------------------------------------
+const countries = [143.4, 1441, 257.4, 1393];
+if (countries.length == 4) {
+  console.log(`массив имеет длинну ${countries.length} символов`);
+} else {
+  console.log(`массив не имеет длинну 4 `);
+}
+
+const percentages = [
+  percentageOfWorld1(countries[0]),
+  percentageOfWorld1(countries[1]),
+  percentageOfWorld1(countries[2]),
+];
+console.log(percentages);
+//----------------------------- LECTURE: Basic Array Operations (Methods) ----------------------------------------------
+
+const neighbours = [`Russia`, `Germany`, `China`, `Yapon`];
+neighbours.push("Utopia");
+console.log(`Вывод массива neighbours ==> ${neighbours}`); // Add utopia
+
+neighbours.pop(); // Delete utopia
+console.log(`Удаление из массива Utopia ==>  ${neighbours}`);
+
+// условие проверки массива на наличие страны
+if (neighbours.includes(`Germany`)) {
+  console.log(`Вы в европпе`);
+} else {
+  console.log(`Вероятно, вы не в центрально-европейской стране :D'`);
+}
+console.log(neighbours);
