@@ -128,3 +128,10 @@ if (neighbours.includes(`Germany`)) {
   console.log(`Вероятно, вы не в центрально-европейской стране :D'`);
 }
 console.log(neighbours);
+// Нахождение индекса страны в массиве и его замена
+if (neighbours.includes(`Germany`)) {
+  const indexCountry = neighbours.indexOf(`Germany`);
+  console.log(`Индекс найденной страны  ==> ${indexCountry}`);
+  neighbours[indexCountry] = `Germany_jopa`;
+}
+console.log(`Измененный массив ==> ${neighbours}`);
