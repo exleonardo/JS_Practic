@@ -135,3 +135,41 @@ if (neighbours.includes(`Germany`)) {
   neighbours[indexCountry] = `Germany_jopa`;
 }
 console.log(`Измененный массив ==> ${neighbours}`);
+//------------- Coding Challenge #2 -------------------------
+
+const calcTip = function (money) {
+  if (money >= 50 && money <= 300) {
+    const chai = money * 0.15;
+    console.log(`Чаевые составляют $${chai} `);
+    return chai;
+  } else if (money >= 50 && money >= 300) {
+    const chaiBig = money * 0.2;
+    console.log(`Чаевые составляют $${chaiBig}`);
+    return chaiBig;
+  } else {
+    console.log(`Расчет без чаевых ваша сумма $${money}`);
+    return money;
+  }
+};
+const totalCalc = calcTip(100);
+console.log(totalCalc);
+
+const bill = [125, 555, 44]; // массив значений чаевых
+const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])]; // массив для записи расчета значений
+
+// const totalTips = calcTip(bill[0]);
+// const totalTips1 = calcTip(bill[1]);
+// const totalTips2 = calcTip(bill[2]);
+
+// tips.push([totalTips]); // добавление данных в массив
+// tips.push([totalTips1]);
+// tips.push([totalTips2]);
+
+console.log(`массив tips принимает вид ==> ${tips}`);
+// сумма чаевых плюс счет
+const total = Number(bill[0]) + Number(tips[0]);
+const total1 = Number(bill[1]) + Number(tips[1]);
+const total2 = Number(bill[2]) + Number(tips[2]);
+console.log(`счет плюс чаевые ${total} для первого значения. 
+счет плюс чаевые ${total1} для второго значения.
+счет плюс чаевые ${total2} для третьего значения.`);
