@@ -173,3 +173,25 @@ const total2 = Number(bill[2]) + Number(tips[2]);
 console.log(`счет плюс чаевые ${total} для первого значения. 
 счет плюс чаевые ${total1} для второго значения.
 счет плюс чаевые ${total2} для третьего значения.`);
+//------------ LECTURE: Introduction to Objects ----------------
+
+// const myCountry = {
+//   country: "Russia",
+//   capital: "Москва",
+//   language: "Russian",
+//   population: 143.4,
+//   neighbours: [`Belarus`, `Ukraine`, `Polsha`],
+// };
+//------------- LECTURE: Dot vs. Bracket Notation ---------------
+const myCountry = {
+  country: "Russia",
+  capital: "Москва",
+  language: "Russian",
+  population: 143.4,
+  neighbours: [`Belarus`, `Ukraine`, `Polsha`],
+};
+myCountry.population = 145.4;
+console.log(myCountry.population);
+myCountry[`population`] = 143.4;
+console.log(`В ${myCountry.country} ${myCountry.population} миллионов человек
+${myCountry.neighbours.length} соседние страны и столица ${myCountry.capital}`);
