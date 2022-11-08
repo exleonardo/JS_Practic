@@ -183,18 +183,18 @@ console.log(`счет плюс чаевые ${total} для первого зн�
 //   neighbours: [`Belarus`, `Ukraine`, `Polsha`],
 // };
 //------------- LECTURE: Dot vs. Bracket Notation ---------------
-const myCountry = {
-  country: "Russia",
-  capital: "Москва",
-  language: "Russian",
-  population: 143.4,
-  neighbours: [`Belarus`, `Ukraine`, `Polsha`],
-};
-myCountry.population = 145.4;
-console.log(myCountry.population);
-myCountry[`population`] = 143.4;
-console.log(`В ${myCountry.country} ${myCountry.population} миллионов человек
-${myCountry.neighbours.length} соседние страны и столица ${myCountry.capital}`);
+// const myCountry = {
+//   country: "Russia",
+//   capital: "Москва",
+//   language: "Russian",
+//   population: 143.4,
+//   neighbours: [`Belarus`, `Ukraine`, `Polsha`],
+// };
+// myCountry.population = 145.4;
+// console.log(myCountry.population);
+// myCountry[`population`] = 143.4;
+// console.log(`В ${myCountry.country} ${myCountry.population} миллионов человек
+// ${myCountry.neighbours.length} соседние страны и столица ${myCountry.capital}`);
 //------------- LECTURE: Object Methods ---------------------------------------
 
 const lul = {
@@ -213,14 +213,23 @@ const lul = {
     const falseng = `he has no driver license`;
 
     if (this.hasDriversLicense) {
-      return console.log(
-        `${this.firsName}, is a ${this.calcAge()} - years old ${this.job} ,  and ${trust}  `
-      );
+      return `${this.firsName}, is a ${this.calcAge()} - years old ${this.job} ,  and ${trust}  `;
     } else {
-      return console.log(
-        `${this.firsName}, is a ${this.calcAge()} - years old ${this.job} , and ${falseng}  `
-      );
+      return `${this.firsName}, is a ${this.calcAge()} - years old ${this.job} , and ${falseng}  `;
     }
   },
 };
 console.log(lul.getSummary());
+//----------------------------------------------------------
+
+const myCountry = {
+  country: "Russia",
+  capital: "Москва",
+  language: "Russian",
+  population: 143.4,
+  neighbours: [`Belarus`, `Ukraine`, `Polsha`],
+  describe: function () {
+    return `В ${this.country} ${this.population} миллионов человек ${this.neighbours.length} соседние страны и столица ${this.capital} `;
+  },
+};
+console.log(myCountry.describe());
