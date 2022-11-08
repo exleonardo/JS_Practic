@@ -220,7 +220,7 @@ const lul = {
   },
 };
 console.log(lul.getSummary());
-//----------------------------------------------------------
+//-------------
 
 const myCountry = {
   country: "Russia",
