@@ -195,3 +195,32 @@ console.log(myCountry.population);
 myCountry[`population`] = 143.4;
 console.log(`В ${myCountry.country} ${myCountry.population} миллионов человек
 ${myCountry.neighbours.length} соседние страны и столица ${myCountry.capital}`);
+//------------- LECTURE: Object Methods ---------------------------------------
+
+const lul = {
+  firsName: "Alex",
+  lastName: "Khomenok",
+  birthYear: 1995,
+  job: `enginer`,
+  friends: [`Artem`, `Vovan`, `Misha`],
+  hasDriversLicense: true,
+  calcAge: function () {
+    this.age = 2022 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    const trust = `he has a driver's license`;
+    const falseng = `he has no driver license`;
+
+    if (this.hasDriversLicense) {
+      return console.log(
+        `${this.firsName}, is a ${this.calcAge()} - years old ${this.job} ,  and ${trust}  `
+      );
+    } else {
+      return console.log(
+        `${this.firsName}, is a ${this.calcAge()} - years old ${this.job} , and ${falseng}  `
+      );
+    }
+  },
+};
+console.log(lul.getSummary());
