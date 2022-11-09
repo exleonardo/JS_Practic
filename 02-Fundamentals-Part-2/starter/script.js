@@ -228,8 +228,13 @@ const myCountry = {
   language: "Russian",
   population: 143.4,
   neighbours: [`Belarus`, `Ukraine`, `Polsha`],
+  checkIsland: function () {
+    this.isIsland = this.neighbours.length > 0 ? true : false;
+    return `${this.isIsland}`;
+  },
   describe: function () {
     return `В ${this.country} ${this.population} миллионов человек ${this.neighbours.length} соседние страны и столица ${this.capital} `;
   },
 };
 console.log(myCountry.describe());
+console.log(myCountry.checkIsland());
