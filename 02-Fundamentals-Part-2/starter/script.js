@@ -204,25 +204,25 @@ if (neighbours.includes(`Germany`)) {
 console.log(`Измененный массив ==> ${neighbours}`);
 //------------- Coding Challenge #2 -------------------------
 
-const calcTip = function (money) {
-  if (money >= 50 && money <= 300) {
-    const chai = money * 0.15;
-    console.log(`Чаевые составляют $${chai} `);
-    return chai;
-  } else if (money >= 50 && money >= 300) {
-    const chaiBig = money * 0.2;
-    console.log(`Чаевые составляют $${chaiBig}`);
-    return chaiBig;
-  } else {
-    console.log(`Расчет без чаевых ваша сумма $${money}`);
-    return money;
-  }
-};
-const totalCalc = calcTip(100);
-console.log(totalCalc);
+// const calcTip = function (money) {
+//   if (money >= 50 && money <= 300) {
+//     const chai = money * 0.15;
+//     console.log(`Чаевые составляют $${chai} `);
+//     return chai;
+//   } else if (money >= 50 && money >= 300) {
+//     const chaiBig = money * 0.2;
+//     console.log(`Чаевые составляют $${chaiBig}`);
+//     return chaiBig;
+//   } else {
+//     console.log(`Расчет без чаевых ваша сумма $${money}`);
+//     return money;
+//   }
+// };
+// const totalCalc = calcTip(100);
+// console.log(totalCalc);
 
-const bill = [125, 555, 44]; // массив значений чаевых
-const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])]; // массив для записи расчета значений
+// const bill = [125, 555, 44]; // массив значений чаевых
+// const tips = [calcTip(bill[0]), calcTip(bill[1]), calcTip(bill[2])]; // массив для записи расчета значений
 
 // const totalTips = calcTip(bill[0]);
 // const totalTips1 = calcTip(bill[1]);
@@ -385,3 +385,29 @@ while (i < countries.length) {
   i++;
 }
 console.log(percentages3);
+
+//-------------------------- Coding Challenge #4 ---------------
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+let tips1 = [];
+let totals = [];
+const calcTip = function (money) {
+  if (money >= 50 && money <= 300) {
+    const chai = money * 0.15;
+    console.log(`Чаевые составляют $${chai} `);
+    return chai;
+  } else if (money >= 50 && money >= 300) {
+    const chaiBig = money * 0.2;
+    console.log(`Чаевые составляют $${chaiBig}`);
+    return chaiBig;
+  } else {
+    console.log(`Расчет без чаевых ваша сумма $${money}`);
+    return money;
+  }
+};
+for (let i = 0; i < bills.length; i++) {
+  tips1.push(calcTip(bills[i]));
+  totals.push(Number(tips1[i]) + Number(bills[i]));
+}
+console.log(tips1); // массив для записи расчета значений чаевых
+console.log(totals); // общий счет
