@@ -368,3 +368,20 @@ for (let i = 0; i < countries.length; i++) {
   percentages2[i] = percentageOfWorld1(countries[i]);
 }
 console.log(percentages2);
+//----------- LECTURE: Looping Backwards and Loops in Loops ----------------
+
+const listOfNeighbours = [["Канада", "Мексика"], ["Испания"], ["Норвегия", "Швеция", "Россия"]];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  for (let y = 0; y < listOfNeighbours.length; y++) {
+    console.log(`Сосед ${listOfNeighbours[y]} `);
+  }
+}
+//------------- LECTURE: The while Loop -------------------
+const percentages3 = [];
+const i = 0;
+while (i < countries.length) {
+  percentages3[i] = percentageOfWorld1(countries[i]);
+  i++;
+}
+console.log(percentages3);
