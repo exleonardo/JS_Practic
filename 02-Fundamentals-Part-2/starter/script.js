@@ -391,6 +391,7 @@ console.log(percentages3);
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 let tips1 = [];
 let totals = [];
+//функция расчета чаевых
 const calcTip = function (money) {
   if (money >= 50 && money <= 300) {
     const chai = money * 0.15;
@@ -405,9 +406,10 @@ const calcTip = function (money) {
     return money;
   }
 };
+// цикл для записи среднего значения из функции
 for (let i = 0; i < bills.length; i++) {
-  tips1.push(calcTip(bills[i]));
-  totals.push(Number(tips1[i]) + Number(bills[i]));
+  tips1.push(calcTip(bills[i])); // массив для записи расчета значений чаевых
+  totals.push(Number(tips1[i]) + Number(bills[i])); // общий счет
 }
-console.log(tips1); // массив для записи расчета значений чаевых
-console.log(totals); // общий счет
+console.log(tips1);
+console.log(totals);
